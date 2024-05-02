@@ -34,6 +34,8 @@ fn sieve_of_eratosthenes(limit: usize) -> Vec<u32> {
         }
         p += 2;
     }
+
+    // Must be modified to relfect the fact that even numbers are no longer in the vector
     primes.iter().enumerate()
         .filter_map(|(i, &prime)| if prime { Some(i as u32) } else { None })
         .collect()
